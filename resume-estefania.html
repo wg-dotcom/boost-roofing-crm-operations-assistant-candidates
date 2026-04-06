@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estefania F. - CRM &amp; Operations Assistant | Boost Roofing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto%20Slab:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FF6D16;
+      --dark: #434349;
+      --highlight: #FF7902;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto Slab', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF7902); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Boost Roofing<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Estefania F.</div>
+    <div class="candidate-title">CRM &amp; Operations Assistant | Colombia</div>
+    <div class="candidate-contact">
+      <span>Colombia</span>
+      <span>5 yrs Customer Service experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">CRM &amp; Operations Specialist with 3+ years supporting U.S.-based teams remotely through CRM management, lead tracking, and data-driven operational support. Experienced in managing lead pipelines, responding to inbound inquiries, maintaining accurate CRM records, and tracking daily KPIs. Highly organized and detail-oriented, with a strong ability to manage multiple tasks, respond quickly to incoming requests, and ensure timely follow-up on all inbound leads, supporting fast-paced remote teams. Experienced with CRM platforms including HubSpot, Salesforce, and Apollo.io, with the ability to quickly adapt to systems such as JobNimbus.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">CRM &amp; Data Management</div>
+    <div class="skill-value">HubSpot CRM, CRM Data Management, CRM Pipeline Management, Lead Management, Data Management (Auditing, Cleansing, Import/Export), Data Entry</div>
+    <div class="skill-label">Technical Skills</div>
+    <div class="skill-value">Excel (Advanced), Google Workspace, Apollo.io, Salesforce, JobNimbus</div>
+    <div class="skill-label">Operations &amp; Support</div>
+    <div class="skill-value">KPI Tracking, Administrative Support, Inbox &amp; Message Monitoring</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">CRM Data &amp; Outreach Coordinator</div>
+        <div class="exp-company">Zaelab, Westport, CT</div>
+        <div class="exp-meta">NOVEMBER 2024 - JUNE 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed and updated CRM records daily to ensure accurate lead tracking and pipeline visibility.</li><li>Audited and maintained lead and company data, improving reporting accuracy and overall data quality.</li><li>Supported outbound sales efforts by providing ICP-aligned lead data and enabling targeted outreach initiatives.</li><li>Improved data flow between marketing and sales by validating data, refining segmentation rules, and managing structured list uploads.</li><li>Maintained structured CRM workflows to support sales team efficiency and consistent processes.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">CRM Data &amp; Outreach Coordinator</div>
+        <div class="exp-company">Trellis (A Zaelab Company), Malden, MA</div>
+        <div class="exp-meta">JUNE 2024 - NOVEMBER 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Maintained CRM data integrity through audits, de-duplication, record reconciliation, and standardized field updates using HubSpot and Apollo.io.</li><li>Supported lead management by organizing, validating, and updating incoming lead data to ensure accuracy and usability.</li><li>Prepared segmented lead lists for outbound campaigns, enabling targeted email sequences and improving campaign effectiveness.</li><li>Partnered with sales leadership to maintain accurate pipeline data and support visibility into key performance metrics.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Support Specialist</div>
+        <div class="exp-company">HubSpot, Cambridge, MA</div>
+        <div class="exp-meta">NOVEMBER 2023 - APRIL 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Responded to high-volume inbound inquiries via chat and email, ensuring timely follow-up and resolution while managing multiple conversations simultaneously.</li><li>Educated U.S.-based customers on HubSpot's platform and best practices, contributing to a 100% CSAT score.</li><li>Collaborated with Customer Success and Product teams to support customer retention and platform adoption.</li><li>Developed and optimized email and SMS lists through workflow automation and data hygiene best practices.</li><li>Maintained and verified CRM data accuracy by auditing and updating customer records using tools such as Google, Shopify, and Excel.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Experience Specialist</div>
+        <div class="exp-company">Okendo (Shopify App Client at Filta), Sydney, NSW, Australia</div>
+        <div class="exp-meta">NOVEMBER 2022 - MAY 2023</div>
+      </div>
+      <ul class="exp-bullets"><li>Addressed inquiries via Intercom chat and email using HubSpot, providing helpful responses to merchants and offering feedback that supported plan upgrades and add-ons to drive revenue.</li><li>Participated in training sessions on Shopify app rules, trends, and moderation best practices to stay up to date.</li><li>Onboarded Essential and Growth merchants and provided feedback on how their stores could be improved to enhance user experience while using Okendo.</li><li>Managed billing matters (refunds, disputes, etc.) and performed delivery fulfillment tasks.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Solution Engineer RFP</div>
+        <div class="exp-company">Jumio Corporation, Sunnyvale, CA</div>
+        <div class="exp-meta">JANUARY 2021 - AUGUST 2022</div>
+      </div>
+      <ul class="exp-bullets"><li>Supported global sales teams in RFP processes, contributing to the successful delivery of 80+ client submissions.</li><li>Ensured consistency and accuracy across pricing, compliance documentation, and standardized response content.</li><li>Managed centralized content libraries and reporting systems, improving turnaround time and team efficiency.</li><li>Trained 20+ new hires on RFP tools, documentation standards, and regulatory requirements.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Business Development Representative</div>
+        <div class="exp-company">CloudTask, San Francisco, CA</div>
+        <div class="exp-meta">MARCH 2019 - MAY 2020</div>
+      </div>
+      <ul class="exp-bullets"><li>Ensured the maintenance of accurate CRM records in Salesforce for better visibility into the pipeline.</li><li>Processed, tracked, and followed up on incoming leads, ensuring accurate CRM documentation and timely engagement for B2B accounts like Chargebee and OpenBOM.</li><li>Achieved a 20% increase in conversion rates through structured follow-up processes and accurate lead documentation.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">BACHELOR OF ARTS (MASS COMMUNICATION)</div>
+      <div class="edu-school">Curtin University, Perth, WA, Australia</div>
+      <div class="edu-year">SEPTEMBER 2009 - SEPTEMBER 2013</div>
+    </div></div>
+    
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>Spanish:</strong> Native</div>
+    <div class="lang-item"><strong>English:</strong> Proficient</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Boost Roofing</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
