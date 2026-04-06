@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirth V. - CRM &amp; Operations Assistant | Boost Roofing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto%20Slab:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FF6D16;
+      --dark: #434349;
+      --highlight: #FF7902;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto Slab', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF7902); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Boost Roofing<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Kirth V.</div>
+    <div class="candidate-title">CRM &amp; Operations Assistant | Philippines</div>
+    <div class="candidate-contact">
+      <span>Philippines</span>
+      <span>5+ yrs Operations experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Client Success and Operations Manager with 4+ years of leadership experience and a strong foundation in customer service and client support. Proven background in managing client accounts, resolving escalations, and leading remote teams in high-volume environments. Experienced in customer issue resolution, SLA management, performance coaching, and process improvement. Adept at aligning service delivery with client business goals while maintaining high customer satisfaction and operational efficiency.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Client &amp; Operations Management</div>
+    <div class="skill-value">Lead Management &amp; Follow-Up, Client Success Management, Account &amp; Relationship Management, Operations Management, Process Improvement, KPI &amp; SLA Management, Cross-Functional Collaboration</div>
+    <div class="skill-label">Data &amp; Reporting</div>
+    <div class="skill-value">KPI Tracking &amp; Reporting (Google Sheets / Excel), Data Entry &amp; Record Management, CRM Systems Management (Podio, HubSpot, Zendesk; adaptable to JobNimbus)</div>
+    <div class="skill-label">Communication &amp; Customer Service</div>
+    <div class="skill-value">Professional Email &amp; Chat Communication, Inbound Call Handling, Customer Issue Resolution, High-Volume Call Environments, De-escalation &amp; Conflict Resolution, Inbox &amp; Message Management, Objection handling &amp; negotiation</div>
+    <div class="skill-label">Administrative &amp; Research</div>
+    <div class="skill-value">Appointment setting &amp; follow-ups, Online research</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Operations Manager/Client Success Manager</div>
+        <div class="exp-company">Rocket Station</div>
+        <div class="exp-meta">February 2023 - January 2026</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed and maintained CRM systems, ensuring accurate and up-to-date records of client interactions, tasks, and operational data.</li><li>Monitored inbound requests, messages, and escalations, ensuring timely responses and zero missed communications.</li><li>Tracked daily operational and performance metrics; maintained KPI reports using Google Sheets to monitor trends and support decision-making.</li><li>Improved workflows and internal processes to increase efficiency in task management, lead handling, and service delivery.</li><li>Maintained organized documentation, SOPs, and reporting systems to support daily operations and business continuity.</li><li>Supported onboarding and transitions by ensuring CRM setup, task tracking, and workflow organization were properly executed.</li><li>Collaborated with cross-functional teams to improve response time, data accuracy, and overall operational efficiency.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Virtual Assistant</div>
+        <div class="exp-company">Rocket Station</div>
+        <div class="exp-meta">August 2021 - February 2023</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed high-volume inbound and outbound communications (40–60 daily) via phone, email, and CRM platforms, ensuring prompt and professional responses.</li><li>Updated and maintained CRM records (Podio), ensuring accurate tracking of leads, client interactions, and follow-up activities.</li><li>Assisted with lead generation, qualification, and tracking to support sales pipeline growth.</li><li>Monitored incoming tasks, messages, and lead activity to ensure no opportunities were missed.</li><li>Performed data entry and maintained organized records across CRM and internal systems.</li><li>Coordinated with team members to manage workload distribution and maintain fast response times.</li><li>Documented all client interactions and updates in CRM systems to ensure data accuracy and visibility.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Expert Performance Consultant/Master Trainer</div>
+        <div class="exp-company">Transcom Worldwide Philippines</div>
+        <div class="exp-meta">Feb 2021 - August 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Led training effectiveness analysis and performance evaluations in the absence of a training manager.</li><li>Conducted training needs analysis and facilitated development sessions for trainers and support staff.</li><li>Performed coaching and class observations to improve training delivery and performance outcomes.</li><li>Monitored performance metrics and generated reports to track team productivity and training effectiveness.</li><li>Maintained accurate documentation, reports, and performance records using spreadsheets and internal systems.</li><li>Collaborated with stakeholders to improve processes, reporting accuracy, and operational workflows.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Trainer</div>
+        <div class="exp-company">Transcom Worldwide Philippines</div>
+        <div class="exp-meta">April 2019 - Feb 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Trained and coached teams on communication, objection handling, and customer engagement</li><li>Maintained training records, performance scorecards, and documentation using Excel and internal tracking tools.</li><li>Tracked trainee performance metrics and provided data-driven coaching and feedback.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">Transcom Worldwide Philippines</div>
+        <div class="exp-meta">August 2018 - April 2019</div>
+      </div>
+      <ul class="exp-bullets"><li>Handled customer inquiries related to billing, technical troubleshooting, and account concerns.</li><li>Delivered consultative upselling and cross-selling, contributing to revenue growth</li><li>Handled inbound customer inquiries and documented all interactions in CRM systems.</li><li>Ensured accurate data entry and proper case tracking to maintain organized customer records.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Customer Service Representative</div>
+        <div class="exp-company">Concentrix Bacolod</div>
+        <div class="exp-meta">May 2015 - August 2015</div>
+      </div>
+      <ul class="exp-bullets"><li>Assisted customers with billing concerns and technical troubleshooting.</li><li>Processed service upgrades and additional line-of-business requests.</li><li>Maintained accurate documentation in internal systems.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Bachelor of Arts in Political Science</div>
+      <div class="edu-school">Southland College</div>
+      <div class="edu-year">2013 - 2018</div>
+    </div></div>
+    
+    
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Boost Roofing</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
