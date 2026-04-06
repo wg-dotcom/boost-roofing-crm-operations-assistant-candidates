@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clara V. - CRM &amp; Operations Assistant | Boost Roofing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto%20Slab:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #FF6D16;
+      --dark: #434349;
+      --highlight: #FF7902;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Roboto Slab', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #FF7902); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Boost Roofing<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Clara V.</div>
+    <div class="candidate-title">CRM &amp; Operations Assistant | Philippines</div>
+    <div class="candidate-contact">
+      <span>Philippines</span>
+      <span>5+ yrs Customer Operations experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Highly organized and detail-oriented operations and administrative professional with 6+ years of experience in data management, client coordination, and process tracking within fast-paced environments. Proven ability to manage high-volume workflows, maintain accurate records, and respond promptly to client and stakeholder needs. Experienced in CRM-like systems, KPI tracking, reporting, and operational support. Adept at working independently in remote or structured environments while ensuring no tasks or communications are missed.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Core Skills</div>
+    <div class="skill-value">CRM &amp; Database Management (transferable skills), Lead Tracking &amp; Follow-ups, KPI Monitoring &amp; Reporting, Inbox &amp; Message Management, Data Entry &amp; Record Accuracy, Administrative &amp; Operational Support, Stakeholder &amp; Client Communication, Process Improvement &amp; Workflow Organization, Google Sheets / Excel Reporting, Strong Written English Communication</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">KYC Client Screening Senior Specialist</div>
+        <div class="exp-company">JPMorgan Chase</div>
+        <div class="exp-meta">March 2024 – December 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Conduct high-volume client screening, ensuring accurate data entry and organization across multiple systems.</li><li>Monitored and handled incoming alerts and cases, ensuring timely responses and resolution.</li><li>Conducted detailed research and documented findings clearly for operational tracking and decision-making.</li><li>Maintained structured workflows to ensure no alerts or cases were missed.</li><li>Collaborated with internal teams to support compliance operations and maintain process efficiency.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Senior Background Screening Analyst</div>
+        <div class="exp-company">HSBC</div>
+        <div class="exp-meta">April 2021 – March 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Managed end-to-end case tracking and maintained accurate records in compliance systems (in CRM environment).</li><li>Handled high-volume case queues, ensuring timely follow-ups and completion of tasks.</li><li>Achieved excellent productivity target, demonstrating strong time management and responsiveness.</li><li>Reduced turnaround time by 20% by improving workflow processes and tracking methods.</li><li>Communicated with stakeholders and vendors to follow up on requirements and updates.</li><li>Maintained organized documentation and ensured data accuracy across systems.</li><li>Generated reports and tracked case progress to support operational performance.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Workforce Analyst</div>
+        <div class="exp-company">HSBC</div>
+        <div class="exp-meta">February 2019 – April 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Tracked daily operational metrics and updated reports to support business decisions (KPI monitoring).</li><li>Managed real-time queues and ensured timely response to operational demands.</li><li>Prepared and maintained accurate reports using Excel and workforce tools.</li><li>Monitored performance metrics and identified trends to improve efficiency.</li><li>Supported management with data-driven insights and operational updates.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Operations Associate</div>
+        <div class="exp-company">HSBC</div>
+        <div class="exp-meta">May 2018 – February 2019</div>
+      </div>
+      <ul class="exp-bullets"><li>Responded to customer inquiries and ensured timely resolution of requests.</li><li>Maintained customer records and documented interactions accurately.</li><li>Performed follow-ups to ensure customer satisfaction and issue closure.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Junior Secretary</div>
+        <div class="exp-company">New Era University</div>
+        <div class="exp-meta">January 2016 – April 2017</div>
+      </div>
+      <ul class="exp-bullets"><li>Performed data entry, file organization, and administrative support tasks.</li><li>Managed documents, correspondence, and records systematically.</li><li>Assisted in drafting and proofreading communications.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Account Manager</div>
+        <div class="exp-company">Optimus Publishing</div>
+        <div class="exp-meta">January 2014 – December 2015</div>
+      </div>
+      <ul class="exp-bullets"><li>Acted as the primary point of contact for clients, managing communications and follow-ups.</li><li>Coordinated client needs and ensured timely delivery of services.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Bachelor of Arts and Sciences, Major in Mass Communication</div>
+      <div class="edu-school">New Era University, Quezon City</div>
+      
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">Japanese Language Studies (Levels 1–6)</div>
+      <div class="edu-school">University of the Philippines, Diliman</div>
+      
+    </div></div>
+    
+    <div class="section"><div class="section-title">Languages</div>
+    <div class="lang-item"><strong>English:</strong> Strong Written Communication</div>
+    <div class="lang-item"><strong>Japanese:</strong> Levels 1-6</div></div>
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Boost Roofing</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
